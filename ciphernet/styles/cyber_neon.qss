@@ -1,0 +1,270 @@
+/* =========================================================================
+ * CipherNet Desktop - Cyber Neon Synthwave Theme
+ * Theme: Cyber Neon Magenta (#FF007F & #00F5D4)
+ * Palette: #0A0612 (Deep Obsidian Violet), #130C22 (Panels), #1B122E (Inputs)
+ * Borders: #381E54 | Accent: #FF007F | Cyan: #00F5D4
+ * ========================================================================= */
+
+QMainWindow, QDialog {
+    background-color: #0A0612;
+    color: #F8EDEB;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+    font-size: 13px;
+}
+
+QWidget {
+    background-color: transparent;
+    color: #F8EDEB;
+    outline: none;
+}
+
+QToolTip {
+    background-color: #1B122E;
+    color: #F8EDEB;
+    border: 1px solid #FF007F;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+QFrame#sidebar {
+    background-color: #0F091C;
+    border-right: 1px solid #2B1644;
+    min-width: 240px;
+    max-width: 240px;
+}
+
+QFrame#sidebar-header {
+    padding: 24px 18px 18px 18px;
+    border-bottom: 1px solid #2B1644;
+}
+
+QLabel#sidebar-logo-icon {
+    font-size: 24px;
+    color: #FF007F;
+}
+
+QLabel#sidebar-title {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+}
+
+QLabel#sidebar-subtitle {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #00F5D4;
+    text-transform: uppercase;
+}
+
+QPushButton.nav-button {
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #A79BB8;
+    background-color: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    margin: 3px 0px;
+}
+
+QPushButton.nav-button:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 0, 127, 0.1);
+    border-left: 3px solid rgba(255, 0, 127, 0.7);
+}
+
+QPushButton.nav-button:checked, QPushButton.nav-button[active="true"] {
+    color: #FF007F;
+    font-weight: 800;
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(255, 0, 127, 0.22),
+        stop:0.8 rgba(255, 0, 127, 0.04),
+        stop:1.0 transparent);
+    border-left: 3px solid #FF007F;
+}
+
+QFrame#sidebar-footer {
+    border-top: 1px solid #2B1644;
+    padding: 14px 18px;
+    background-color: #0A0612;
+}
+
+QFrame.panel-card, QFrame.stat-card {
+    background-color: #130C22;
+    border: 1px solid #2C1844;
+    border-radius: 10px;
+}
+
+QFrame.panel-card:hover, QFrame.stat-card:hover {
+    background-color: #180F2B;
+    border: 1px solid rgba(255, 0, 127, 0.5);
+}
+
+QLabel.stat-card-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #A79BB8;
+    text-transform: uppercase;
+}
+
+QLabel.stat-card-value {
+    font-size: 22px;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin: 4px 0px;
+}
+
+QLabel.stat-card-subtext {
+    font-size: 11px;
+    color: #7B6D8F;
+}
+
+QLabel.section-header-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+QLabel.section-header-subtitle {
+    font-size: 11px;
+    color: #A79BB8;
+    margin-bottom: 6px;
+}
+
+QPushButton {
+    background-color: #21133B;
+    color: #F8EDEB;
+    border: 1px solid #3B2163;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: #2D1A50;
+    border-color: #FF007F;
+    color: #FFFFFF;
+}
+
+QPushButton.btn-primary {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FF007F, stop:1 #B5179E);
+    color: #FFFFFF;
+    border: 1px solid #FF5EA8;
+    font-weight: 800;
+}
+
+QPushButton.btn-primary:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FF3399, stop:1 #D622BD);
+}
+
+QPushButton.btn-success {
+    background-color: #0E2E28;
+    color: #00F5D4;
+    border: 1px solid #00F5D4;
+    font-weight: 700;
+}
+
+QPushButton.btn-danger {
+    background-color: #380E24;
+    color: #FF007F;
+    border: 1px solid #FF007F;
+    font-weight: 700;
+}
+
+QPushButton.btn-warning {
+    background-color: #38290E;
+    color: #FEE440;
+    border: 1px solid #FEE440;
+    font-weight: 700;
+}
+
+QLineEdit, QTextEdit, QPlainTextEdit, QComboBox {
+    background-color: #170E29;
+    color: #F8EDEB;
+    border: 1px solid #311B4D;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #FF007F;
+    background-color: #1C1133;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #130C22;
+    color: #F8EDEB;
+    border: 1px solid #FF007F;
+    border-radius: 8px;
+    selection-background-color: rgba(255, 0, 127, 0.25);
+    selection-color: #FF007F;
+}
+
+QTableWidget, QTableView {
+    background-color: #130C22;
+    alternate-background-color: #180F2B;
+    color: #F8EDEB;
+    border: 1px solid #2C1844;
+    border-radius: 10px;
+    gridline-color: #241438;
+    selection-background-color: rgba(255, 0, 127, 0.25);
+    selection-color: #FFFFFF;
+}
+
+QHeaderView::section {
+    background-color: #0E081A;
+    color: #A79BB8;
+    border: none;
+    border-bottom: 2px solid #2C1844;
+    border-right: 1px solid #241438;
+    padding: 10px 12px;
+    font-weight: 800;
+}
+
+QTabBar::tab {
+    background-color: #0E081A;
+    color: #A79BB8;
+    border: 1px solid #2C1844;
+    border-bottom: none;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 700;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-right: 6px;
+}
+
+QTabBar::tab:selected {
+    color: #FF007F;
+    background-color: #130C22;
+    border-top: 2.5px solid #FF007F;
+    border-left: 1px solid #2C1844;
+    border-right: 1px solid #2C1844;
+    border-bottom: 1px solid #130C22;
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    background-color: #0A0612;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background-color: #2E1948;
+}
+
+QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {
+    background-color: #FF007F;
+}
+
+QStatusBar {
+    background-color: #0A0612;
+    border-top: 1px solid #2B1644;
+    color: #A79BB8;
+}

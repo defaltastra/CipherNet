@@ -1,0 +1,271 @@
+/* =========================================================================
+ * CipherNet Desktop - Gruvbox Dark Warm Hacker Theme
+ * Theme: Gruvbox Dark (#FE8019 Amber & #B8BB26 Green)
+ * Palette: #1D2021 (Dark Base), #282828 (Panels), #32302F (Cards)
+ * Borders: #3C3836 | Accent: #FE8019 | Yellow: #FABD2F | Green: #B8BB26
+ * ========================================================================= */
+
+QMainWindow, QDialog {
+    background-color: #1D2021;
+    color: #EBDBB2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+    font-size: 13px;
+}
+
+QWidget {
+    background-color: transparent;
+    color: #EBDBB2;
+    outline: none;
+}
+
+QToolTip {
+    background-color: #282828;
+    color: #EBDBB2;
+    border: 1px solid #FE8019;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+QFrame#sidebar {
+    background-color: #1D2021;
+    border-right: 1px solid #3C3836;
+    min-width: 240px;
+    max-width: 240px;
+}
+
+QFrame#sidebar-header {
+    padding: 24px 18px 18px 18px;
+    border-bottom: 1px solid #3C3836;
+}
+
+QLabel#sidebar-logo-icon {
+    font-size: 24px;
+    color: #FE8019;
+}
+
+QLabel#sidebar-title {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: #EBDBB2;
+}
+
+QLabel#sidebar-subtitle {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #FABD2F;
+    text-transform: uppercase;
+}
+
+QPushButton.nav-button {
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #A89984;
+    background-color: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    margin: 3px 0px;
+}
+
+QPushButton.nav-button:hover {
+    color: #FBF1C7;
+    background-color: rgba(254, 128, 25, 0.1);
+    border-left: 3px solid rgba(254, 128, 25, 0.7);
+}
+
+QPushButton.nav-button:checked, QPushButton.nav-button[active="true"] {
+    color: #FE8019;
+    font-weight: 800;
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(254, 128, 25, 0.22),
+        stop:0.8 rgba(254, 128, 25, 0.04),
+        stop:1.0 transparent);
+    border-left: 3px solid #FE8019;
+}
+
+QFrame#sidebar-footer {
+    border-top: 1px solid #3C3836;
+    padding: 14px 18px;
+    background-color: #1D2021;
+}
+
+QFrame.panel-card, QFrame.stat-card {
+    background-color: #282828;
+    border: 1px solid #3C3836;
+    border-radius: 10px;
+}
+
+QFrame.panel-card:hover, QFrame.stat-card:hover {
+    background-color: #32302F;
+    border: 1px solid rgba(254, 128, 25, 0.5);
+}
+
+QLabel.stat-card-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #A89984;
+    text-transform: uppercase;
+}
+
+QLabel.stat-card-value {
+    font-size: 22px;
+    font-weight: 900;
+    color: #FBF1C7;
+    margin: 4px 0px;
+}
+
+QLabel.stat-card-subtext {
+    font-size: 11px;
+    color: #928374;
+}
+
+QLabel.section-header-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #FBF1C7;
+    letter-spacing: 0.5px;
+}
+
+QLabel.section-header-subtitle {
+    font-size: 11px;
+    color: #A89984;
+    margin-bottom: 6px;
+}
+
+QPushButton {
+    background-color: #3C3836;
+    color: #EBDBB2;
+    border: 1px solid #504945;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background-color: #504945;
+    border-color: #FE8019;
+    color: #FBF1C7;
+}
+
+QPushButton.btn-primary {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #D65D0E, stop:1 #FE8019);
+    color: #FBF1C7;
+    border: 1px solid #FFA05C;
+    font-weight: 800;
+}
+
+QPushButton.btn-primary:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #E06518, stop:1 #FFA05C);
+    color: #1D2021;
+}
+
+QPushButton.btn-success {
+    background-color: #273A27;
+    color: #B8BB26;
+    border: 1px solid #B8BB26;
+    font-weight: 700;
+}
+
+QPushButton.btn-danger {
+    background-color: #3E2424;
+    color: #FB4934;
+    border: 1px solid #FB4934;
+    font-weight: 700;
+}
+
+QPushButton.btn-warning {
+    background-color: #3C331D;
+    color: #FABD2F;
+    border: 1px solid #FABD2F;
+    font-weight: 700;
+}
+
+QLineEdit, QTextEdit, QPlainTextEdit, QComboBox {
+    background-color: #1D2021;
+    color: #EBDBB2;
+    border: 1px solid #3C3836;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #FE8019;
+    background-color: #282828;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #282828;
+    color: #EBDBB2;
+    border: 1px solid #FE8019;
+    border-radius: 8px;
+    selection-background-color: rgba(254, 128, 25, 0.25);
+    selection-color: #FE8019;
+}
+
+QTableWidget, QTableView {
+    background-color: #1D2021;
+    alternate-background-color: #282828;
+    color: #EBDBB2;
+    border: 1px solid #3C3836;
+    border-radius: 10px;
+    gridline-color: #32302F;
+    selection-background-color: rgba(254, 128, 25, 0.25);
+    selection-color: #FBF1C7;
+}
+
+QHeaderView::section {
+    background-color: #1D2021;
+    color: #A89984;
+    border: none;
+    border-bottom: 2px solid #3C3836;
+    border-right: 1px solid #32302F;
+    padding: 10px 12px;
+    font-weight: 800;
+}
+
+QTabBar::tab {
+    background-color: #1D2021;
+    color: #A89984;
+    border: 1px solid #3C3836;
+    border-bottom: none;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 700;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-right: 6px;
+}
+
+QTabBar::tab:selected {
+    color: #FE8019;
+    background-color: #282828;
+    border-top: 2.5px solid #FE8019;
+    border-left: 1px solid #3C3836;
+    border-right: 1px solid #3C3836;
+    border-bottom: 1px solid #282828;
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    background-color: #1D2021;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background-color: #3C3836;
+}
+
+QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {
+    background-color: #FE8019;
+}
+
+QStatusBar {
+    background-color: #1D2021;
+    border-top: 1px solid #3C3836;
+    color: #A89984;
+}

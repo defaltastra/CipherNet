@@ -1,0 +1,828 @@
+/* =========================================================================
+ * CipherNet Dual Theme Stylesheet
+ * Supports:
+ * 1. Cyber Neon Magenta (#17121C, #F72585, #FF70A6, #B5179E, #F8EDEB)
+ * 2. Gruvbox Dark Classic (#1d2021, #282828, #fe8019, #fabd2f, #b8bb26, #83a598, #ebdbb2)
+ * ========================================================================= */
+
+Screen {
+    background: #17121C;
+    color: #F8EDEB;
+    layout: vertical;
+}
+
+/* =========================================================================
+ * 1. GLOBAL COMPONENT BASE STYLES
+ * ========================================================================= */
+
+/* Global Button Sizing & Text Centering */
+Button {
+    height: 3;
+    min-width: 12;
+    padding: 0 1;
+    margin-right: 1;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+    border: none;
+}
+
+Button:focus {
+    text-style: bold underline;
+}
+
+/* Global Select & Option Dropdown Base */
+Select {
+    height: 3;
+    border: none;
+    background: transparent;
+}
+
+SelectCurrent {
+    height: 3;
+    padding: 0 1;
+    border: round #4a2c5a;
+    background: #1e1529;
+    color: #F8EDEB;
+}
+
+SelectOverlay {
+    background: #1e1529;
+    border: round #F72585;
+    color: #F8EDEB;
+    max-height: 12;
+}
+
+SelectOverlay > .option-list--option {
+    padding: 0 1;
+    color: #F8EDEB;
+    background: transparent;
+}
+
+SelectOverlay > .option-list--option-highlighted {
+    background: #B5179E;
+    color: #FFFFFF;
+    text-style: bold;
+}
+
+SelectOverlay > .option-list--option-hover {
+    background: #3c244e;
+    color: #FF70A6;
+}
+
+/* Global Input Fields */
+Input {
+    height: 3;
+    padding: 0 1;
+    background: #150f1c;
+    border: round #4a2c5a;
+    color: #F8EDEB;
+}
+
+/* Top Navigation Bar */
+.nav-container {
+    height: 3;
+    dock: top;
+    background: #1c1425;
+    border-bottom: solid #3a254c;
+    padding: 0 1;
+    align-vertical: middle;
+}
+
+.brand-text {
+    width: 22;
+    padding: 0 1;
+    text-style: bold;
+}
+
+.nav-tab {
+    margin: 0 1;
+    background: #251a32;
+    color: #a48eb8;
+    border: none;
+    height: 1;
+    min-width: 13;
+}
+
+.nav-tab:hover {
+    background: #3c244e;
+    color: #F8EDEB;
+}
+
+.nav-tab-active {
+    margin: 0 1;
+    background: #B5179E;
+    color: #FFFFFF;
+    border: none;
+    text-style: bold;
+    height: 1;
+    min-width: 13;
+}
+
+/* Bottom Status Bar */
+.status-bar-container {
+    height: 1;
+    dock: bottom;
+    background: #120d17;
+    color: #a48eb8;
+    padding: 0 1;
+    border-top: solid #2c1b3d;
+}
+
+/* Main View Containers */
+.view-container {
+    height: 1fr;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+.section-header {
+    height: 1;
+    margin: 1 0 0 0;
+    text-style: bold;
+}
+
+/* KPI Cards */
+.kpi-grid {
+    grid-size: 4 1;
+    grid-gutter: 1;
+    height: 5;
+    margin-bottom: 1;
+}
+
+.stat-card {
+    background: #1e1529;
+    border: round #3c244e;
+    padding: 0 1;
+    height: 5;
+}
+
+.stat-card:hover {
+    border: round #F72585;
+}
+
+/* Animated Telemetry & Waveform Panels */
+.waveform-panel {
+    background: #181120;
+    border: round #3c244e;
+    padding: 0 1;
+    height: 7;
+    margin-bottom: 1;
+}
+
+.waveform-panel:hover {
+    border: round #00f5d4;
+}
+
+.radar-panel {
+    background: #181120;
+    border: round #3c244e;
+    padding: 0 1;
+    height: 8;
+    margin-bottom: 1;
+}
+
+.radar-panel:hover {
+    border: round #F72585;
+}
+
+.entropy-panel {
+    background: #181120;
+    border: round #3c244e;
+    padding: 0 1;
+    height: 3;
+    margin-bottom: 1;
+}
+
+.entropy-panel:hover {
+    border: round #FF70A6;
+}
+
+/* DataTables */
+DataTable {
+    background: #181120;
+    border: round #3c244e;
+    height: 12;
+    color: #F8EDEB;
+}
+
+DataTable > .datatable--header {
+    background: #281739;
+    color: #FF70A6;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: #5b1e56;
+    color: #FFFFFF;
+    text-style: bold;
+}
+
+.overview-table {
+    height: 7;
+}
+
+.connections-table {
+    height: 15;
+}
+
+.rules-table {
+    height: 10;
+}
+
+.timeline-table {
+    height: 16;
+}
+
+.logs-table {
+    height: 16;
+}
+
+/* =========================================================================
+ * 2. OVERVIEW & ACTIVITY LAYOUT
+ * ========================================================================= */
+.activity-row {
+    height: auto;
+    min-height: 15;
+    margin-top: 0;
+}
+
+.events-table {
+    width: 3fr;
+    height: 14;
+}
+
+.side-panel {
+    width: 1fr;
+    min-width: 32;
+    margin-left: 1;
+    background: #1e1529;
+    border: round #3c244e;
+    padding: 0 1;
+    height: auto;
+    min-height: 14;
+}
+
+.side-panel Button {
+    width: 100%;
+    height: 3;
+    margin-bottom: 1;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+}
+
+.panel-title {
+    color: #FF70A6;
+    text-style: bold;
+    margin-top: 0;
+    margin-bottom: 1;
+}
+
+.panel-note {
+    color: #928374;
+    margin-top: 1;
+}
+
+/* =========================================================================
+ * 3. FILTER TOOLBARS (FIXED BUTTON VISIBILITY & SPACING)
+ * ========================================================================= */
+.filter-toolbar {
+    height: auto;
+    min-height: 4;
+    align-vertical: middle;
+    margin-bottom: 1;
+    background: #1c1425;
+    border: round #3c244e;
+    padding: 0 1;
+}
+
+.toolbar-label {
+    color: #FF70A6;
+    text-style: bold;
+    margin-right: 1;
+}
+
+.filter-select {
+    width: 20;
+    margin-right: 1;
+    height: 3;
+}
+
+#input-net-search, #input-log-search {
+    width: 28;
+    margin-right: 1;
+    height: 3;
+}
+
+.filter-toolbar Button {
+    height: 3;
+    min-width: 13;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+    margin-right: 1;
+}
+
+/* Network Bottom Split */
+.net-bottom-pane {
+    height: 10;
+    margin-top: 1;
+}
+
+.net-detail-box {
+    width: 1fr;
+    background: #1e1529;
+    border: round #3c244e;
+    padding: 0 1;
+    margin-right: 1;
+}
+
+.net-iface-box {
+    width: 1fr;
+    background: #1e1529;
+    border: round #3c244e;
+    padding: 0 1;
+}
+
+/* =========================================================================
+ * 4. IDS & CRYPTOGRAPHY PANELS
+ * ========================================================================= */
+.ids-split-layout {
+    height: 1fr;
+}
+
+.ids-left-panel {
+    width: 2fr;
+    padding-right: 1;
+}
+
+.ids-right-panel {
+    width: 3fr;
+    padding-left: 1;
+}
+
+.ids-btn-row {
+    height: 3;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+.ids-btn-row Button {
+    width: 1fr;
+    height: 3;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+}
+
+.status-badge {
+    background: #251a32;
+    border: round #48355e;
+    padding: 0 1;
+    height: 3;
+    margin-bottom: 1;
+}
+
+#btn-fire-attack {
+    width: 100%;
+    height: 3;
+    margin-top: 1;
+    margin-bottom: 1;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+}
+
+#ids-alert-inspector {
+    background: #181120;
+    border: round #3c244e;
+    padding: 1;
+    height: 8;
+}
+
+/* Cryptography Views */
+.crypto-pane-scroll {
+    height: 1fr;
+}
+
+.crypto-row {
+    height: auto;
+    margin-bottom: 1;
+}
+
+.crypto-box {
+    width: 1fr;
+    background: #1e1529;
+    border: round #3c244e;
+    padding: 1;
+    margin: 0 1 0 0;
+}
+
+.crypto-output-box {
+    background: #120d17;
+    border: solid #3c244e;
+    padding: 1;
+    min-height: 8;
+}
+
+.crypto-meta-box {
+    color: #83a598;
+    margin-top: 1;
+}
+
+.btn-action-row {
+    height: 3;
+    margin-top: 1;
+}
+
+.btn-action-row Button {
+    height: 3;
+    min-width: 13;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+}
+
+/* =========================================================================
+ * 5. SETTINGS VIEW
+ * ========================================================================= */
+.settings-scroll-container {
+    height: 1fr;
+}
+
+.settings-row {
+    height: auto;
+    margin-bottom: 1;
+}
+
+.settings-col {
+    width: 1fr;
+    background: #1e1529;
+    border: round #3c244e;
+    padding: 1;
+    margin: 0 1 0 0;
+}
+
+.checkbox-row {
+    height: 3;
+    align-vertical: middle;
+}
+
+.settings-tip {
+    color: #fabd2f;
+    margin-top: 1;
+}
+
+.settings-btn-row {
+    height: 3;
+    margin-top: 1;
+}
+
+.settings-btn-row Button {
+    height: 3;
+    min-width: 16;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+}
+
+/* =========================================================================
+ * 6. CREATORS VIEW
+ * ========================================================================= */
+.creators-scroll-container {
+    height: 1fr;
+}
+
+.creators-cards-row {
+    height: auto;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+.creator-profile-card {
+    width: 1fr;
+    background: #1e1529;
+    border: round #4a2c5a;
+    padding: 1;
+    margin: 0 1;
+    align-horizontal: center;
+}
+
+.creator-profile-card:hover {
+    border: round #F72585;
+}
+
+.creator-badge {
+    margin-bottom: 1;
+    align-horizontal: center;
+    text-align: center;
+}
+
+.creator-name {
+    text-style: bold;
+    color: #F8EDEB;
+    margin-bottom: 0;
+}
+
+.creator-title {
+    color: #FF70A6;
+    margin-bottom: 1;
+}
+
+.creator-profile-card Button {
+    width: 80%;
+    min-width: 20;
+    height: 3;
+    margin-top: 1;
+    margin-bottom: 1;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+}
+
+.creator-bio {
+    width: 100%;
+    padding: 0 1;
+}
+
+.about-block {
+    background: #1c1425;
+    border: round #3c244e;
+    padding: 1;
+    margin-top: 1;
+}
+
+.inspector-box {
+    background: #181120;
+    border: round #3c244e;
+    padding: 1;
+    height: 7;
+}
+
+/* =========================================================================
+ * 7. THEME SPECIFIC OVERRIDES: CYBER NEON MAGENTA (#F72585)
+ * ========================================================================= */
+Screen.theme-cyber-neon {
+    background: #17121C;
+    color: #F8EDEB;
+}
+
+Screen.theme-cyber-neon Button.-primary {
+    background: #B5179E;
+    color: #FFFFFF;
+}
+
+Screen.theme-cyber-neon Button.-primary:hover {
+    background: #F72585;
+}
+
+Screen.theme-cyber-neon Button.-success {
+    background: #1b998b;
+    color: #FFFFFF;
+}
+
+Screen.theme-cyber-neon Button.-success:hover {
+    background: #2ec4b6;
+}
+
+Screen.theme-cyber-neon Button.-error {
+    background: #F72585;
+    color: #FFFFFF;
+}
+
+Screen.theme-cyber-neon Button.-error:hover {
+    background: #ff4797;
+}
+
+Screen.theme-cyber-neon Button.-warning {
+    background: #d65d0e;
+    color: #FFFFFF;
+}
+
+Screen.theme-cyber-neon Button.-warning:hover {
+    background: #fe8019;
+}
+
+Screen.theme-cyber-neon Button.-default {
+    background: #352345;
+    color: #F8EDEB;
+}
+
+Screen.theme-cyber-neon Button.-default:hover {
+    background: #4a2c5a;
+}
+
+Screen.theme-cyber-neon SelectCurrent {
+    background: #1e1529;
+    border: round #4a2c5a;
+    color: #F8EDEB;
+}
+
+Screen.theme-cyber-neon SelectCurrent:focus {
+    border: round #F72585;
+    background: #281a38;
+}
+
+Screen.theme-cyber-neon SelectOverlay {
+    background: #1e1529;
+    border: round #F72585;
+    color: #F8EDEB;
+}
+
+Screen.theme-cyber-neon SelectOverlay > .option-list--option-highlighted {
+    background: #B5179E;
+    color: #FFFFFF;
+}
+
+Screen.theme-cyber-neon SelectOverlay > .option-list--option-hover {
+    background: #3c244e;
+    color: #FF70A6;
+}
+
+Screen.theme-cyber-neon .nav-tab-active {
+    background: #B5179E;
+    color: #FFFFFF;
+}
+
+/* =========================================================================
+ * 8. THEME SPECIFIC OVERRIDES: GRUVBOX DARK CLASSIC
+ * ========================================================================= */
+Screen.theme-gruvbox-dark {
+    background: #1d2021;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark .nav-container {
+    background: #282828;
+    border-bottom: solid #504945;
+}
+
+Screen.theme-gruvbox-dark .nav-tab {
+    background: #3c3836;
+    color: #a89984;
+}
+
+Screen.theme-gruvbox-dark .nav-tab:hover {
+    background: #504945;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark .nav-tab-active {
+    background: #d65d0e;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark .status-bar-container {
+    background: #1d2021;
+    color: #a89984;
+    border-top: solid #3c3836;
+}
+
+Screen.theme-gruvbox-dark .stat-card {
+    background: #282828;
+    border: round #3c3836;
+}
+
+Screen.theme-gruvbox-dark .stat-card:hover {
+    border: round #fe8019;
+}
+
+Screen.theme-gruvbox-dark DataTable {
+    background: #282828;
+    border: round #3c3836;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark DataTable > .datatable--header {
+    background: #32302f;
+    color: #fabd2f;
+}
+
+Screen.theme-gruvbox-dark DataTable > .datatable--cursor {
+    background: #504945;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark .filter-toolbar,
+Screen.theme-gruvbox-dark .side-panel,
+Screen.theme-gruvbox-dark .net-detail-box,
+Screen.theme-gruvbox-dark .net-iface-box,
+Screen.theme-gruvbox-dark .crypto-box,
+Screen.theme-gruvbox-dark .settings-col,
+Screen.theme-gruvbox-dark .creator-profile-card,
+Screen.theme-gruvbox-dark .about-block,
+Screen.theme-gruvbox-dark .waveform-panel,
+Screen.theme-gruvbox-dark .radar-panel,
+Screen.theme-gruvbox-dark .entropy-panel,
+Screen.theme-gruvbox-dark .inspector-box {
+    background: #282828;
+    border: round #3c3836;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark .waveform-panel:hover,
+Screen.theme-gruvbox-dark .radar-panel:hover,
+Screen.theme-gruvbox-dark .entropy-panel:hover {
+    border: round #fe8019;
+}
+
+Screen.theme-gruvbox-dark .creator-profile-card:hover {
+    border: round #fe8019;
+}
+
+Screen.theme-gruvbox-dark .status-badge {
+    background: #32302f;
+    border: round #504945;
+}
+
+Screen.theme-gruvbox-dark .terminal-photo-notice {
+    background: #282828;
+    border: round #504945;
+}
+
+Screen.theme-gruvbox-dark Input {
+    background: #1d2021;
+    border: round #504945;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark Input:focus {
+    border: round #fe8019;
+}
+
+Screen.theme-gruvbox-dark SelectCurrent {
+    background: #282828;
+    border: round #504945;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark SelectCurrent:focus {
+    border: round #fe8019;
+    background: #32302f;
+}
+
+Screen.theme-gruvbox-dark SelectOverlay {
+    background: #282828;
+    border: round #fe8019;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark SelectOverlay > .option-list--option {
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark SelectOverlay > .option-list--option-highlighted {
+    background: #d65d0e;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark SelectOverlay > .option-list--option-hover {
+    background: #3c3836;
+    color: #fabd2f;
+}
+
+Screen.theme-gruvbox-dark Button.-primary {
+    background: #458588;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark Button.-primary:hover {
+    background: #83a598;
+}
+
+Screen.theme-gruvbox-dark Button.-success {
+    background: #98971a;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark Button.-success:hover {
+    background: #b8bb26;
+}
+
+Screen.theme-gruvbox-dark Button.-error {
+    background: #cc241d;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark Button.-error:hover {
+    background: #fb4934;
+}
+
+Screen.theme-gruvbox-dark Button.-warning {
+    background: #d65d0e;
+    color: #fbf1c7;
+}
+
+Screen.theme-gruvbox-dark Button.-warning:hover {
+    background: #fe8019;
+}
+
+Screen.theme-gruvbox-dark Button.-default {
+    background: #3c3836;
+    color: #ebdbb2;
+}
+
+Screen.theme-gruvbox-dark Button.-default:hover {
+    background: #504945;
+}

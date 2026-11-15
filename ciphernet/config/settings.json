@@ -1,0 +1,12 @@
+{
+  "theme": "charcoal-rose",
+  "refresh_rate": 2.0,
+  "resolve_hostnames": false,
+  "show_loopback": false,
+  "enable_scapy": false,
+  "ids_auto_start": false,
+  "ids_intensity": "Medium",
+  "max_logs": 1000,
+  "sound_alerts": false,
+  "default_crypto_algo": "AES-256-GCM"
+}
